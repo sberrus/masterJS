@@ -24,6 +24,11 @@ const Index = () => {
             desc: "Comportamiento de la palabra reservada [this]",
             url: "/thiscontextual",
         },
+        {
+            titulo: "Recursividad",
+            desc: "Recursividad en JS",
+            url: "/recursividad",
+        },
     ]);
 
     return (

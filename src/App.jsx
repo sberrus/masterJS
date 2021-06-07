@@ -5,6 +5,7 @@ import Prototipos from "./componentes/Clases/Prototipos";
 import StrictMode from "./componentes/Clases/StrictMode";
 import FuncionesFlecha from "./componentes/Clases/FuncionesFlecha";
 import ThisContextual from "./componentes/Clases/ThisContextual";
+import Recursividad from "./componentes/Clases/Recursividad";
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useEffect } from "react";
@@ -27,6 +28,7 @@ function App() {
                         <Route path="/strictmode" component={StrictMode} />
                         <Route path="/funcionesflecha" component={FuncionesFlecha} />
                         <Route path="/thiscontextual" component={ThisContextual} />
+                        <Route path="/recursividad" component={Recursividad} />
 
                         <Redirect to="/" />
                     </Switch>
