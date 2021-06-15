@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 const Header = () => {
+    const [reloader, setReloader] = useState(true);
+    //fecha
+    const [dia, setDia] = useState(0);
+    const [mes, setMes] = useState(0);
+    const [año, setAño] = useState(0);
+    //horas
+    const [horas, setHoras] = useState(0);
+    const [minutos, setMinutos] = useState(0);
+    const [segundos, setSegundos] = useState(0);
+
+    useEffect(() => {
+        const fecha = new Date();
+        //fecha
+        const dia = fecha.getDate() + 1;
+        setDia(dia);
+        const mes = fecha.getMonth() + 1;
+        setMes(mes);
+        const año = fecha.getYear() + 1900;
+        setAño(año);
+        //hora
+        const segundos = fecha.getSeconds();
+        setSegundos(segundos);
+        const minutos = fecha.getMinutes();
+        setMinutos(minutos);
+        const horas = fecha.getHours();
+        setHoras(horas);
+        setTimeout(() => {
+            setReloader(!reloader);
+        }, 1000);
+    }, [reloader]);
     return (
         <div className="container-fluid border-bottom mb-5">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -33,7 +62,14 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link
+                                    className="nav-link dropdown-toggle"
+                                    to="/"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
                                     Dropdown
                                 </Link>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -72,6 +108,14 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
+            <div className="d-flex flex-row justify-content-center">
+                <div id="hora" className="me-3">
+                    <span id="hora">{horas}</span>:<span id="minutos">{minutos}</span>:<span id="segundos">{segundos}</span>
+                </div>
+                <div id="fecha">
+                    <span>{dia}</span>/<span>{mes}</span>/<span>{año}</span>
+                </div>
+            </div>
         </div>
     );
 };

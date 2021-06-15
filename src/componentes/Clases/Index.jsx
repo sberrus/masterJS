@@ -49,17 +49,24 @@ const Index = () => {
             desc: "OperadoresEspeciales en JS. Operadore ternario, operador Spread etc...",
             url: "/OperadoresEspeciales",
         },
+        {
+            titulo: "Apis del Navegador",
+            desc: "Usando las APIS del navegador con js. Llevando Javascript a otro nivel",
+            url: "/Apis",
+        },
     ]);
 
     return (
         <div className="container mt-5">
             <h1 className="display-3 text-success">Bienvenidos</h1>
             <p>
-                - Agradecimientos a <strong>@SoyDalto</strong> por su labor como divulgador y educador siendo uno de los educadores que más contenido he aprovechado en mi carrera como desarrollador.
+                - Agradecimientos a <strong>@SoyDalto</strong> por su labor como divulgador y educador siendo uno de los
+                educadores que más contenido he aprovechado en mi carrera como desarrollador.
             </p>
             <p>
-                Al ser cursos dedicados al lenguaje de programación en si mismo, el contenido se encontrará entre comentarios dentro de cada uno de los *.jsx. Por lo que dejaré el enlace para que se
-                pueda acceder a cada uno de los repositorios.
+                Al ser cursos dedicados al lenguaje de programación en si mismo, el contenido se encontrará entre comentarios
+                dentro de cada uno de los *.jsx. Por lo que dejaré el enlace para que se pueda acceder a cada uno de los
+                repositorios.
             </p>
             <h2 className="display-6">Clases</h2>
             <div className="row">
@@ -76,8 +83,12 @@ const Index = () => {
                                     <Link to={clase.url} className="btn btn-dark border">
                                         Ir a {clase.titulo}
                                     </Link>
-                                    <a href={`https://github.com/sberrus/masterJS/blob/master/src/componentes/Clases${clase.url}.jsx`} rel="noreferrer" target="_BLANK">
-                                        <i className="bi bi-github float-end border rounded p-1 text-white"></i>
+                                    <a
+                                        href={`https://github.com/sberrus/masterJS/blob/master/src/componentes/Clases${clase.url}.jsx`}
+                                        rel="noreferrer"
+                                        target="_BLANK"
+                                    >
+                                        <i className="bi bi-github float-end text-white fs-40"></i>
                                     </a>
                                 </div>
                             </div>

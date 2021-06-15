@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Alerts from "../Alerts/Alerts";
 
 const OperadoresEspeciales = () => {

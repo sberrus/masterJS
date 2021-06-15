@@ -10,6 +10,7 @@ import Clousures from "./componentes/Clases/Clousures";
 import ParametrosPorDefecto from "./componentes/Clases/ParametrosPorDefecto";
 import ParametrosRest from "./componentes/Clases/ParametrosRest";
 import OperadoresEspeciales from "./componentes/Clases/OperadoresEspeciales";
+import Apis from "./componentes/Clases/Apis";
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useEffect } from "react";
@@ -37,6 +38,7 @@ function App() {
                         <Route path="/ParametrosRest" component={ParametrosRest} />
                         <Route path="/OperadoresEspeciales" component={OperadoresEspeciales} />
                         <Route path="/Clousures" component={Clousures} />
+                        <Route path="/Apis" component={Apis} />
 
                         <Redirect to="/" />
                     </Switch>
