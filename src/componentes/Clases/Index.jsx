@@ -3,31 +3,51 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
     //Estudiar como incorporar BBDD para almacenar las clases y el contenido para acceder mediante params [CREAR API PARA QUE DEVUELVA ESTOS DATOS]
-    const [clases, setClases] = useState([
+    const [clases] = useState([
         {
             titulo: "Prototipos",
             desc: "Clase de prototipos y sus usos en Javascript",
-            url: "/prototipos",
+            url: "/Prototipos",
         },
         {
             titulo: "Modo Estricto",
             desc: "Uso de [use strict] en javascript",
-            url: "/strictmode",
+            url: "/StrictMode",
         },
         {
             titulo: "Funciones Flecha",
             desc: "Destripando a fondo las funciones flecha",
-            url: "/funcionesflecha",
+            url: "/FuncionesFlecha",
         },
         {
             titulo: "THIS Contextual",
             desc: "Comportamiento de la palabra reservada [this]",
-            url: "/thiscontextual",
+            url: "/ThisContextual",
         },
         {
             titulo: "Recursividad",
             desc: "Recursividad en JS",
-            url: "/recursividad",
+            url: "/Recursividad",
+        },
+        {
+            titulo: "Clousures",
+            desc: "Clousures en JS",
+            url: "/Clousures",
+        },
+        {
+            titulo: "ParametrosPorDefecto",
+            desc: "ParametrosPorDefecto en JS",
+            url: "/ParametrosPorDefecto",
+        },
+        {
+            titulo: "ParametrosRest",
+            desc: "ParametrosRest en JS",
+            url: "/ParametrosRest",
+        },
+        {
+            titulo: "OperadoresEspeciales",
+            desc: "OperadoresEspeciales en JS. Operadore ternario, operador Spread etc...",
+            url: "/OperadoresEspeciales",
         },
     ]);
 
@@ -35,22 +55,31 @@ const Index = () => {
         <div className="container mt-5">
             <h1 className="display-3 text-success">Bienvenidos</h1>
             <p>
-                - Agradecimientos a <strong>@SoyDalto</strong> por su labor como divulgador y
-                educador siendo uno de los educadores que más contenido he aprovechado en mi carrera
-                como desarrollador.
+                - Agradecimientos a <strong>@SoyDalto</strong> por su labor como divulgador y educador siendo uno de los educadores que más contenido he aprovechado en mi carrera como desarrollador.
+            </p>
+            <p>
+                Al ser cursos dedicados al lenguaje de programación en si mismo, el contenido se encontrará entre comentarios dentro de cada uno de los *.jsx. Por lo que dejaré el enlace para que se
+                pueda acceder a cada uno de los repositorios.
             </p>
             <h2 className="display-6">Clases</h2>
             <div className="row">
                 {/*Mapeo de las clases*/}
                 {clases.map((clase, index) => (
-                    <div className="col-12 col-md-4 mt-3" key={index}>
-                        <div className="card bg-dark border">
-                            <div className="card-body">
-                                <h5 className="card-title">{clase.titulo}</h5>
-                                <p className="card-text">{clase.desc}</p>
-                                <Link to={clase.url} className="btn btn-dark border">
-                                    Ir a {clase.titulo}
-                                </Link>
+                    <div className="col-12 col-md-6 col-lg-4 mt-3" key={index}>
+                        <div className="card bg-dark border section-display">
+                            <div className="card-body d-flex flex-column">
+                                <div>
+                                    <h5 className="card-title">{clase.titulo}</h5>
+                                    <p className="card-text">{clase.desc}</p>
+                                </div>
+                                <div className="mt-auto">
+                                    <Link to={clase.url} className="btn btn-dark border">
+                                        Ir a {clase.titulo}
+                                    </Link>
+                                    <a href={`https://github.com/sberrus/masterJS/blob/master/src/componentes/Clases${clase.url}.jsx`} rel="noreferrer" target="_BLANK">
+                                        <i className="bi bi-github float-end border rounded p-1 text-white"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

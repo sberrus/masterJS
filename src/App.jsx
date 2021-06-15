@@ -6,6 +6,10 @@ import StrictMode from "./componentes/Clases/StrictMode";
 import FuncionesFlecha from "./componentes/Clases/FuncionesFlecha";
 import ThisContextual from "./componentes/Clases/ThisContextual";
 import Recursividad from "./componentes/Clases/Recursividad";
+import Clousures from "./componentes/Clases/Clousures";
+import ParametrosPorDefecto from "./componentes/Clases/ParametrosPorDefecto";
+import ParametrosRest from "./componentes/Clases/ParametrosRest";
+import OperadoresEspeciales from "./componentes/Clases/OperadoresEspeciales";
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useEffect } from "react";
@@ -24,11 +28,15 @@ function App() {
                 <div className="container h-75">
                     <Switch>
                         <Route path="/" exact component={Index} />
-                        <Route path="/prototipos" component={Prototipos} />
-                        <Route path="/strictmode" component={StrictMode} />
-                        <Route path="/funcionesflecha" component={FuncionesFlecha} />
-                        <Route path="/thiscontextual" component={ThisContextual} />
-                        <Route path="/recursividad" component={Recursividad} />
+                        <Route path="/Prototipos" component={Prototipos} />
+                        <Route path="/StrictMode" component={StrictMode} />
+                        <Route path="/FuncionesFlecha" component={FuncionesFlecha} />
+                        <Route path="/ThisContextual" component={ThisContextual} />
+                        <Route path="/Recursividad" component={Recursividad} />
+                        <Route path="/ParametrosPorDefecto" component={ParametrosPorDefecto} />
+                        <Route path="/ParametrosRest" component={ParametrosRest} />
+                        <Route path="/OperadoresEspeciales" component={OperadoresEspeciales} />
+                        <Route path="/Clousures" component={Clousures} />
 
                         <Redirect to="/" />
                     </Switch>
