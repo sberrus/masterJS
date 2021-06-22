@@ -22,15 +22,20 @@ const Header = () => {
         setAño(año);
         //hora
         const segundos = fecha.getSeconds();
-        setSegundos(segundos);
+        setSegundos(addZero(segundos));
         const minutos = fecha.getMinutes();
-        setMinutos(minutos);
+        setMinutos(addZero(minutos));
         const horas = fecha.getHours();
         setHoras(horas);
         setTimeout(() => {
             setReloader(!reloader);
         }, 1000);
     }, [reloader]);
+
+    const addZero = (n) => {
+        if (n.toString().length < 2) return "0".concat(n);
+        return n;
+    };
     return (
         <div className="container-fluid border-bottom mb-5">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

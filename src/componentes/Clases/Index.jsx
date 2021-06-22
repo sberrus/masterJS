@@ -51,8 +51,13 @@ const Index = () => {
         },
         {
             titulo: "Apis del Navegador",
-            desc: "Usando las APIS del navegador con js. Llevando Javascript a otro nivel",
+            desc: "Introducción a las APIS del &lt;code&gt;navegador</code>. Usando API Date, LocalStorage y SessionStorage",
             url: "/Apis",
+        },
+        {
+            titulo: "Apis Drag & Drop",
+            desc: "Usando API DRAG & DROP",
+            url: "/ApiDragDrop",
         },
     ]);
 

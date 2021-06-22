@@ -1,0 +1,84 @@
+.circulo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50rem;
+    background-color: #f00;
+    text-align: center;
+    cursor: grabbing;
+}
+
+.circulo2 {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50rem;
+    margin-left: 1em;
+    background-color: #ff0;
+    text-align: center;
+    cursor: grabbing;
+}
+
+.rectangulo {
+    margin: auto;
+    width: 80%;
+    height: 150px;
+    background-color: #ccc;
+    outline: 6px dashed #aaa;
+}
+
+.texturas {
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.texturas div {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 6px;
+}
+
+.textura-1 {
+    background: url("../Media/DragnDrop/textura-1.jpg") center center;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+.textura-2 {
+    background: url("../Media/DragnDrop/textura-2.jpg") center center;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+.textura-3 {
+    background: url("../Media/DragnDrop/textura-3.jpg") center center;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+}
+
+.zona {
+    transition: all 0.3s;
+    margin: 10px;
+    background: #000;
+    height: 200px;
+    border: 4px dashed #ddd;
+}
+
+.bg-1 {
+    background: url("../Media/DragnDrop/textura-1.jpg");
+    background-size: cover;
+    border: none;
+}
+.bg-2 {
+    background: url("../Media/DragnDrop/textura-2.jpg");
+    background-size: cover;
+    border: none;
+}
+.bg-3 {
+    background: url("../Media/DragnDrop/textura-3.jpg");
+    background-size: cover;
+    border: none;
+}
