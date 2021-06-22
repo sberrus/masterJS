@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./CustomStyles/DragnDrop.css";
 
 const DragAndDrop = () => {
@@ -20,18 +20,18 @@ const DragAndDrop = () => {
                 className="zona"
                 onDragOver={(e) => e.preventDefault()}
                 onDrop={(e) => {
-                    let id = e.dataTransfer.getData("textura");
-                    if (id == 1) {
+                    let id = parseInt(e.dataTransfer.getData("textura"));
+                    if (id === 1) {
                         e.target.classList.add("bg-1");
                         e.target.classList.remove("bg-2");
                         e.target.classList.remove("bg-3");
                     }
-                    if (id == 2) {
+                    if (id === 2) {
                         e.target.classList.add("bg-2");
                         e.target.classList.remove("bg-1");
                         e.target.classList.remove("bg-3");
                     }
-                    if (id == 3) {
+                    if (id === 3) {
                         e.target.classList.add("bg-3");
                         e.target.classList.remove("bg-2");
                         e.target.classList.remove("bg-1");

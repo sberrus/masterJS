@@ -59,6 +59,11 @@ const Index = () => {
             desc: "Usando API DRAG & DROP",
             url: "/ApiDragDrop",
         },
+        {
+            titulo: "Apis de Geolocalización",
+            desc: "Usnado la API de Geolocalización",
+            url: "/ApiGeolocalizacion",
+        },
     ]);
 
     return (

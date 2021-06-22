@@ -12,6 +12,8 @@ import ParametrosRest from "./componentes/Clases/ParametrosRest";
 import OperadoresEspeciales from "./componentes/Clases/OperadoresEspeciales";
 import Apis from "./componentes/Clases/Apis";
 import ApiDragDrop from "./componentes/Clases/ApiDragDrop";
+import ApiGeolocalizacion from "./componentes/Clases/ApiGeolocalizacion";
+
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useEffect } from "react";
@@ -41,6 +43,7 @@ function App() {
                         <Route path="/Clousures" component={Clousures} />
                         <Route path="/Apis" component={Apis} />
                         <Route path="/ApiDragDrop" component={ApiDragDrop} />
+                        <Route path="/ApiGeolocalizacion" component={ApiGeolocalizacion} />
 
                         <Redirect to="/" />
                     </Switch>
