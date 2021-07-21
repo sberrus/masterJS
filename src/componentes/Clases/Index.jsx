@@ -64,6 +64,16 @@ const Index = () => {
             desc: "Usnado la API de Geolocalización",
             url: "/ApiGeolocalizacion",
         },
+        {
+            titulo: "API History",
+            desc: "Usnado la API History para ver el historial del usuario",
+            url: "/ApiHistory",
+        },
+        {
+            titulo: "API File Reader",
+            desc: "API para poder recibir y leer archivos externos",
+            url: "/ApiFileReader",
+        },
     ]);
 
     return (

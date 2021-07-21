@@ -13,7 +13,8 @@ import OperadoresEspeciales from "./componentes/Clases/OperadoresEspeciales";
 import Apis from "./componentes/Clases/Apis";
 import ApiDragDrop from "./componentes/Clases/ApiDragDrop";
 import ApiGeolocalizacion from "./componentes/Clases/ApiGeolocalizacion";
-
+import ApiHistory from "./componentes/Clases/ApiHistory";
+import ApiFileReader from "./componentes/Clases/ApiFileReader";
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useEffect } from "react";
@@ -44,6 +45,8 @@ function App() {
                         <Route path="/Apis" component={Apis} />
                         <Route path="/ApiDragDrop" component={ApiDragDrop} />
                         <Route path="/ApiGeolocalizacion" component={ApiGeolocalizacion} />
+                        <Route path="/ApiHistory" component={ApiHistory} />
+                        <Route path="/ApiFileReader" component={ApiFileReader} />
 
                         <Redirect to="/" />
                     </Switch>
