@@ -1,0 +1,10 @@
+#contenedorGaleria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+}
+
+#contenedorGaleria img {
+    width: 100%;
+    max-width: 250px;
+}
