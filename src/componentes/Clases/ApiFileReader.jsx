@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Alerts from "../Alerts/Alerts";
 import GaleriaDinamica from "./galeriaDinamica.jsx";
+import GaleriaDragnDrop from "./galeriaDragnDrop.jsx";
 
 const ApiFileReader = () => {
     const [fileReaderRes, setFileReaderRes] = useState(null);
@@ -181,6 +182,7 @@ const ApiFileReader = () => {
                         </article>
                     </section>
                     <GaleriaDinamica />
+                    <GaleriaDragnDrop />
                 </div>
             </div>
         </div>

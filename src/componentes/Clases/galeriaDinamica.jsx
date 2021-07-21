@@ -22,7 +22,7 @@ const galeriaDinamica = () => {
                     rel="noreferrer"
                     target="_BLANK"
                 >
-                    <i className="bi bi-github float-end text-white fs-40"></i>
+                    <i className="bi bi-github text-white fs-40"></i>
                 </a>
             </h3>
             <input

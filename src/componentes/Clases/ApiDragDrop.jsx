@@ -118,6 +118,7 @@ const ApiDragDrop = () => {
                                     }}
                                     onDragOver={(e) => {
                                         e.preventDefault();
+                                        e.stopPropagation();
                                         console.log("Encima");
                                     }}
                                     onDrop={() => {

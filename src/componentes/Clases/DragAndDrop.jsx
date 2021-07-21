@@ -18,7 +18,10 @@ const DragAndDrop = () => {
             </div>
             <div
                 className="zona"
-                onDragOver={(e) => e.preventDefault()}
+                onDragOver={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }}
                 onDrop={(e) => {
                     let id = parseInt(e.dataTransfer.getData("textura"));
                     if (id === 1) {
