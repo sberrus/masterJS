@@ -74,6 +74,11 @@ const Index = () => {
             desc: "API para poder recibir y leer archivos externos",
             url: "/ApiFileReader",
         },
+        {
+            titulo: "API IndexedDB",
+            desc: "null",
+            url: "/ApiIndexedDB",
+        },
     ]);
 
     return (

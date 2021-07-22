@@ -1,7 +1,7 @@
 import React from "react";
 import "./CustomStyles/galeriaDragnDrop.css";
 
-const galeriaDragnDrop = () => {
+const GaleriaDragnDrop = () => {
     const changeStyle = (el, color) => {
         el.style.border = `4px dashed ${color}`;
     };
@@ -11,16 +11,18 @@ const galeriaDragnDrop = () => {
 
     const cargarArchivo = (ar) => {
         const format = ar.name.split(".")[1];
-        if (format == "txt") {
+        if (format === "txt") {
             leerArchivoTexto(ar);
         }
-        if (format == "png" || format == "jpg") {
+        if (format === "png" || format === "jpg") {
             leerArchivoImg(ar);
             document.querySelector("#galeria").textContent = "";
         }
-        if (format == "mp4") {
+        if (format === "mp4") {
             leerVideo(ar);
             document.querySelector("#galeria").textContent = "";
+        } else {
+            return;
         }
     };
 
@@ -43,7 +45,16 @@ const galeriaDragnDrop = () => {
     const leerVideo = (ar) => {
         const reader = new FileReader();
         reader.readAsArrayBuffer(ar);
+        const progressBar = document.getElementById("galeria-progress");
+        progressBar.style.display = "block";
+        reader.addEventListener("progress", (e) => {
+            //evento que se dispara mientras se va cargando el archivo.
+            progressBar.value = ((e.loaded / e.total) * 100).toFixed();
+        });
         reader.addEventListener("load", (e) => {
+            // Escucha para cuando el archivo se ha cargado por completo
+            const progressBar = document.getElementById("galeria-progress");
+            progressBar.style.display = "none";
             let video = new Blob([new Uint8Array(e.currentTarget.result)], { type: "mp4/video" });
             let url = URL.createObjectURL(video);
             let videoElement = document.createElement("VIDEO");
@@ -87,9 +98,10 @@ const galeriaDragnDrop = () => {
             >
                 Zona de Drop
             </div>
+            <progress id="galeria-progress" max="100" value="0" />
             <div id="galeria"></div>
         </div>
     );
 };
 
-export default galeriaDragnDrop;
+export default GaleriaDragnDrop;

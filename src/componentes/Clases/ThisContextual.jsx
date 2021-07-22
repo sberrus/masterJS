@@ -2,7 +2,7 @@ import React from "react";
 import Alerts from "../Alerts/Alerts";
 const ThisContextual = () => {
     const thisContext = (e) => {
-        return console.log("Escribe en la consola la palabra reservada %cthis","color:#a275ad;");
+        return console.log("Escribe en la consola la palabra reservada %cthis", "color:#a275ad;");
     };
     return (
         <div>
@@ -15,7 +15,8 @@ const ThisContextual = () => {
                 </h1>
                 <div id="content">
                     <p>
-                        La palabra reservada <code>this</code> es utilizada para referirnos al objeto padre del objeto en el que hacemos uso de esta palabra reservada.
+                        La palabra reservada <code>this</code> es utilizada para referirnos al objeto padre del objeto en el
+                        que hacemos uso de esta palabra reservada.
                     </p>
                     <button onClick={thisContext} className="btn btn-outline-primary">
                         Imprimir en consola this del document
