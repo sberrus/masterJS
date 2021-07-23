@@ -4,6 +4,20 @@ import Alerts from "../Alerts/Alerts";
 const IndexdedDB = () => {
     const IDBRequest = indexedDB;
 
+    const crearBBDD = () => {
+        const consulta = IDBRequest.open("primeraDDBB");
+        consulta.addEventListener("upgradeneeded", () => {
+            console.log("Tabla Nueva Generada");
+        });
+
+        consulta.addEventListener("success", (e) => {
+            console.log("Consulta generada correctamente");
+        });
+        consulta.addEventListener("error", (e) => {
+            console.log("Ha habido un error al ver/crear la BBDD");
+        });
+    };
+
     return (
         <div>
             <div className="container" id="header">
@@ -43,7 +57,8 @@ const IndexdedDB = () => {
                             <ul>
                                 <li>
                                     <h5>
-                                        <code>IndexedDB</code>.<code className="arrowFunction">open( BBDD_NAME , VERSION )</code>
+                                        <code>IndexedDB</code>.
+                                        <code className="arrowFunction">open( BBDD_NAME , VERSION )</code>
                                     </h5>
                                     <p>
                                         Este método nos permite visualizar una bbdd ya existente, pero en el caso de que no
@@ -54,7 +69,7 @@ const IndexdedDB = () => {
                             <button
                                 className="btn btn-large btn-outline-light"
                                 onClick={() => {
-                                    console.log(IDBRequest.open("bbdd"));
+                                    crearBBDD();
                                 }}
                             >
                                 Crear BBDD
@@ -64,7 +79,28 @@ const IndexdedDB = () => {
                             <h3>Eventos de IndexedDB</h3>
                             <p>
                                 Como se ha dicho esta bbdd es asincrona y trabaja con eventos del DOM para acceder a ella.
+                                Esto nos permite utilizar su almacenamiento y evitar que el navegador se bloquee en el caso
+                                de que haya mucha información por procesar.
                             </p>
+                            <h4>Eventos</h4>
+                            <ul>
+                                <li>
+                                    <h5>success</h5>
+                                    <p>
+                                        Este evento se dispara al momento de que se cree o se haya leido correctamente la
+                                        bbdd. Esto sabiendo el comportamiento del método{" "}
+                                        <code className="arrowFunction">.open()</code> explicado anteriormente.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>error</h5>
+                                    <p>Este se dispara al momento de que haya algun error.</p>
+                                </li>
+                                <li>
+                                    <h5>upgradeneeded</h5>
+                                    <p>Este evento se dispara solo si la tabla a consultar no ha sido creada.</p>
+                                </li>
+                            </ul>
                         </article>
                     </section>
                 </div>
