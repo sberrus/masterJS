@@ -12,7 +12,7 @@ const Recursividad = () => {
             //comprueba que haya algo en la variable msg
             else edad = prompt("introduce tu edad"); //de lo contrario muestra el mensaje determinado
             edad = parseInt(edad); // parseamos edad a INT ya que el método prompt() devuelve STRING
-            if (isNaN(edad)) throw "introduce un número para la edad"; // comprobamos que la variable sea un número, sino, devuelve un STRING como error. Este STRING se envia como parámetro en el catch para que vuelva a pasar todas las comprobaciones creando una función recursiva (callback).
+            if (isNaN(edad)) return "introduce un número para la edad"; // comprobamos que la variable sea un número, sino, devuelve un STRING como error. Este STRING se envia como parámetro en el catch para que vuelva a pasar todas las comprobaciones creando una función recursiva (callback).
 
             //### LÓGICA PRINCIPAL ###
             if (edad > 18) console.log("Eres mayor de edad");
@@ -34,8 +34,8 @@ const Recursividad = () => {
                     <p>Dicho de manera sencilla es cuando una función se llama a sí misma.</p>
                     <h3 className="text-warning">Consideraciones especiales</h3>
                     <p>
-                        Hay que tener mucho cuidado con las recursividades porque estas pueden generar un bucle infinito y puede ocasionarnos un gran problema respecto a los recursos que consume
-                        nuestro programa.
+                        Hay que tener mucho cuidado con las recursividades porque estas pueden generar un bucle infinito y
+                        puede ocasionarnos un gran problema respecto a los recursos que consume nuestro programa.
                     </p>
                     <button onClick={validarEdad} className="btn btn-outline-primary">
                         Probar recursividad
