@@ -79,6 +79,11 @@ const Index = () => {
             desc: "null",
             url: "/ApiIndexedDB",
         },
+        {
+            titulo: "API Web Workers",
+            desc: "A trabajar robotsitos!",
+            url: "/ApiWebWorkers",
+        },
     ]);
 
     return (

@@ -16,6 +16,7 @@ import ApiGeolocalizacion from "./componentes/Clases/ApiGeolocalizacion";
 import ApiHistory from "./componentes/Clases/ApiHistory";
 import ApiFileReader from "./componentes/Clases/ApiFileReader";
 import ApiIndexedDB from "./componentes/Clases/ApiIndexedDB";
+import ApiWebWorkers from "./componentes/Clases/ApiWebWorkers";
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useEffect } from "react";
@@ -49,6 +50,7 @@ function App() {
                         <Route path="/ApiHistory" component={ApiHistory} />
                         <Route path="/ApiFileReader" component={ApiFileReader} />
                         <Route path="/ApiIndexedDB" component={ApiIndexedDB} />
+                        <Route path="/ApiWebWorkers" component={ApiWebWorkers} />
 
                         <Redirect to="/" />
                     </Switch>
