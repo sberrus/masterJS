@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const CRUDIndexedDB = () => {
+    const [listaNombres, setListaNombres] = useState([]);
     const [nombre, setNombre] = useState("");
     const [nuevoNombre, setNuevoNombre] = useState("");
     const [key, setKey] = useState(0);
@@ -34,12 +35,16 @@ const CRUDIndexedDB = () => {
         //evento para cuando se haya completado la transacción.
         dbtransaction.addEventListener("complete", () => {
             console.log("objeto añadido correctamente");
+            setListaNombres([...listaNombres, nombre]);
             setNombre("");
         });
     };
 
     //Transacción para ver los elementos de nuestra DDBB.
     const leerElementos = () => {
+        //Para imprimir
+        let listaElementos = [];
+
         //obtenemos los docs de la bbdd que deseamos acceder
         const db = DDBB.result;
 
@@ -56,9 +61,11 @@ const CRUDIndexedDB = () => {
         cursor.addEventListener("success", () => {
             if (cursor.result) {
                 console.log(cursor.result.value);
+                listaElementos.push(cursor.result.value);
                 cursor.result.continue();
             } else {
                 console.log("-- FIN BBDD --");
+                setListaNombres(listaElementos);
             }
         });
     };
@@ -162,6 +169,11 @@ const CRUDIndexedDB = () => {
                 <button className="btn btn-outline-success" onClick={leerElementos}>
                     Leer Elementos
                 </button>
+                <ul>{listaNombres.length > 0 && listaNombres.map((item, index) => <li key={index}>{item}</li>)}</ul>
+                <small>
+                    La lógica presente en este clase se puede optimizar muchisimo para evitar la redundancia pero por motivos
+                    de tiempo paso :p
+                </small>
             </div>
         </div>
     );
