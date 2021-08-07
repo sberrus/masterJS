@@ -1,0 +1,24 @@
+.observer {
+    width: 300px;
+    text-align: center;
+    padding: 145px 0;
+    margin: 10px auto;
+    color: #000;
+}
+
+.observer:nth-child(2) {
+    background: hsl(241, 50%, 65%);
+    border: 2px dashed hsl(241, 50%, 25%);
+}
+.observer:nth-child(3) {
+    background: hsl(0, 50%, 65%);
+    border: 2px dashed hsl(0, 50%, 25%);
+}
+.observer:nth-child(4) {
+    background: hsl(298, 50%, 65%);
+    border: 2px dashed hsl(298, 50%, 25%);
+}
+.observer:nth-child(5) {
+    background: hsl(133, 50%, 65%);
+    border: 2px dashed hsl(133, 50%, 25%);
+}
