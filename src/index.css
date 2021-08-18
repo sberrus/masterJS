@@ -38,6 +38,9 @@ code.arrowFunction {
 code.string {
     color: coral;
 }
+code.obj {
+    color: rgb(33, 187, 54);
+}
 
 #storageExamples {
     display: grid;
@@ -51,4 +54,7 @@ code.string {
 #storageExamples div:nth-child(2) {
     grid-column: 4/6;
     width: 100%;
+}
+article{
+    border-top: 1px solid rgba(221, 221, 221, 0.363);
 }

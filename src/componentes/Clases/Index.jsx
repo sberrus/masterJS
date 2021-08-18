@@ -76,13 +76,43 @@ const Index = () => {
         },
         {
             titulo: "API IndexedDB",
-            desc: "null",
+            desc: "BBDD interna de los navegadores",
             url: "/ApiIndexedDB",
         },
         {
-            titulo: "API Web Workers",
-            desc: "A trabajar robotsitos!",
-            url: "/ApiWebWorkers",
+            titulo: "API MatchMedia",
+            desc: "Usando Media querys para disparar eventos",
+            url: "/ApiMatchMedia",
+        },
+        {
+            titulo: "API InterceptionObserver",
+            desc: "Api para saber si un elemento se muestra en la pantalla",
+            url: "/ApiInterceptionObserver",
+        },
+        {
+            titulo: "API Visibility Change",
+            desc: "Api para saber si un elemento se muestra en la pantalla",
+            url: "/ApiVisibilityChange",
+        },
+        {
+            titulo: "API Notifications",
+            desc: "Api para enviar notificaciones a los usuarios",
+            url: "/ApiNotifications",
+        },
+        {
+            titulo: "Web Workers",
+            desc: "Creando Hilos (Threads) en JS",
+            url: "/WebWorkers",
+        },
+        {
+            titulo: "Objeto Navigator a Fondo",
+            desc: "Un vistazo más profundo al objeto Navigator",
+            url: "/ObjetoNavigator",
+        },
+        {
+            titulo: "Memoization",
+            desc: "Mejora en los tiempos de ejecución para mejorar experiencia del usuario",
+            url: "/Memoization",
         },
     ]);
 

@@ -144,7 +144,7 @@ const IndexdedDB = () => {
                             </p>
                             <ul>
                                 <li>
-                                    <hr />
+                                    
                                     <h5>result.createObjectStore(KEY, &#123;CONFIG&#125;)</h5>
                                     <p>Este sirve para crear un almacen dentro de la BBDD indicada.</p>
                                     <p>A este método se le envian 2 argumentos:</p>
@@ -185,7 +185,7 @@ const IndexdedDB = () => {
                                     </ul>
                                 </li>
                                 <li>
-                                    <hr />
+                                    
                                     <h5>result.transaction(KEY,MODE)</h5>
                                     <p>
                                         Este método nos permite realizar operaciones dentro de un documento. A este método se
@@ -246,7 +246,7 @@ const IndexdedDB = () => {
                                 para que disparé algun event al momento de haberse culminado.
                             </p>
                             <ul>
-                                <hr />
+                                
                                 <h3>Agregar Elementos (CREATE)</h3>
                                 <li>
                                     <h5>
@@ -264,7 +264,7 @@ const IndexdedDB = () => {
                                     </p>
                                 </li>
                                 <li>
-                                    <hr />
+                                    
                                     <h3>Leer elementos (READ)</h3>
                                     <h5>
                                         <code className="var">cursor</code> =<code>store</code>
@@ -292,7 +292,7 @@ const IndexdedDB = () => {
                                     </p>
                                 </li>
                                 <li>
-                                    <hr />
+                                    
                                     <h3>Modificar Elemento (UPDATE)</h3>
                                     <h5>store<code className="arrowFunction">.put(KEY,OBJETO)</code></h5>
                                     <p>

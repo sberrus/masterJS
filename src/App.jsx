@@ -16,7 +16,12 @@ import ApiGeolocalizacion from "./componentes/Clases/ApiGeolocalizacion";
 import ApiHistory from "./componentes/Clases/ApiHistory";
 import ApiFileReader from "./componentes/Clases/ApiFileReader";
 import ApiIndexedDB from "./componentes/Clases/ApiIndexedDB";
-import ApiWebWorkers from "./componentes/Clases/ApiWebWorkers";
+import ApiMatchMedia from "./componentes/Clases/ApiMatchMedia";
+import ApiInterceptionObserver from "./componentes/Clases/ApiInterceptionObserver";
+import ApiVisibilityChange from "./componentes/Clases/ApiVisibilityChange";
+import ApiNotifications from "./componentes/Clases/ApiNotifications";
+import WebWorkers from "./componentes/Clases/WebWorkers";
+import ObjetoNavigator from "./componentes/Clases/ObjetoNavigator";
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useEffect } from "react";
@@ -50,7 +55,12 @@ function App() {
                         <Route path="/ApiHistory" component={ApiHistory} />
                         <Route path="/ApiFileReader" component={ApiFileReader} />
                         <Route path="/ApiIndexedDB" component={ApiIndexedDB} />
-                        <Route path="/ApiWebWorkers" component={ApiWebWorkers} />
+                        <Route path="/ApiMatchMedia" component={ApiMatchMedia} />
+                        <Route path="/ApiInterceptionObserver" component={ApiInterceptionObserver} />
+                        <Route path="/ApiVisibilityChange" component={ApiVisibilityChange} />
+                        <Route path="/ApiNotifications" component={ApiNotifications} />
+                        <Route path="/WebWorkers" component={WebWorkers} />
+                        <Route path="/ObjetoNavigator" component={ObjetoNavigator} />
 
                         <Redirect to="/" />
                     </Switch>
