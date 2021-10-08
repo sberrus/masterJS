@@ -22,6 +22,9 @@ import ApiVisibilityChange from "./componentes/Clases/ApiVisibilityChange";
 import ApiNotifications from "./componentes/Clases/ApiNotifications";
 import WebWorkers from "./componentes/Clases/WebWorkers";
 import ObjetoNavigator from "./componentes/Clases/ObjetoNavigator";
+import Memoization from "./componentes/Clases/Memoization";
+import Cache from "./componentes/Clases/Cache";
+import Cookie from "./componentes/Clases/Cookie.jsx";
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { useEffect } from "react";
@@ -61,6 +64,9 @@ function App() {
                         <Route path="/ApiNotifications" component={ApiNotifications} />
                         <Route path="/WebWorkers" component={WebWorkers} />
                         <Route path="/ObjetoNavigator" component={ObjetoNavigator} />
+                        <Route path="/Memoization" component={Memoization} />
+                        <Route path="/Cache" component={Cache} />
+                        <Route path="/Cookie" component={Cookie} />
 
                         <Redirect to="/" />
                     </Switch>

@@ -114,6 +114,16 @@ const Index = () => {
             desc: "Mejora en los tiempos de ejecución para mejorar experiencia del usuario",
             url: "/Memoization",
         },
+        {
+            titulo: "Cache",
+            desc: "Usando la cache para mejorar el rendimiento y los tiempos de carga de nuestro sitio web.",
+            url: "/Cache",
+        },
+        {
+            titulo: "Cookie",
+            desc: "Manejando información del cliente con las cookies",
+            url: "/Cookie",
+        },
     ]);
 
     return (

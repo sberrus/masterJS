@@ -39,7 +39,7 @@ const Header = () => {
     return (
         <div className="container-fluid border-bottom mb-5">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div className="container-fluid">
+                <div className="container">
                     <Link className="navbar-brand" to="/">
                         Master de Javascript
                     </Link>
